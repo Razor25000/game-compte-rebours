@@ -38,12 +38,13 @@ const TimerChallenge = ({ title, targetTime }) => {
                 <h2>{title}</h2>
 
                 <p className="challenge-time">
-                    {targetTime} second{targetTime > 1 ? 's' : ''}
+                    {targetTime} seconde{targetTime > 1 ? 's' : ''}
                 </p>
                 <p>
-                    <button onClick={timerIsActive ? handleStop : handleStart}>{timerIsActive ? "Stop" : "Start"}</button>
+                    <button onClick={timerIsActive ? handleStop : handleStart}>{timerIsActive ? "Arrêter" : "Démarrer"}</button>
                 </p>
-                <p className={timerIsActive ? "active" : ""}>{timerIsActive ? "Time is Running..." : "Timer inactive"}</p>
+                
+                <p className={timerIsActive ? "active" : ""}>{timerIsActive ? "Le temps passe..." : "Minuteur inactif"}</p>
             </section>
         </>
     )
