@@ -5,12 +5,14 @@ import ResultModal from "./ResultModal";
 const TimerChallenge = ({ title, targetTime }) => {
     const [timerStarted, setTimerStarted] = useState(false);
     const [timerExpired, setTimerExpired] = useState(false);
+    
     const timerRef = useRef();
     const dialogRef = useRef();
+    
     function handleStart() {
         timerRef.current = setTimeout(() => {
             setTimerExpired(true);
-            dialogRef.current.showModal();
+            dialogRef.current.open();
         }, targetTime * 1000);
         setTimerStarted(true);
     }
